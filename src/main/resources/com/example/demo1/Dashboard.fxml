@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.Dashboard">
+   <children>
+      <AnchorPane fx:id="navbar" prefHeight="600.0" prefWidth="180.0" styleClass="navbar" stylesheets="@dashboard.css">
+         <children>
+            <Circle fx:id="circle" fill="#555d63" layoutX="90.0" layoutY="85.0" radius="71.0" stroke="BLACK" strokeType="INSIDE" />
+            <Label layoutX="33.0" layoutY="176.0" text="Welcome!" textFill="#fffefe">
+               <font>
+                  <Font name="Microsoft Sans Serif" size="25.0" />
+               </font>
+            </Label>
+            <Label fx:id="userr" alignment="CENTER" layoutX="11.0" layoutY="212.0" prefHeight="32.0" prefWidth="158.0" text="rawef" textFill="#fab300">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="home" alignment="CENTER" layoutX="15.0" layoutY="266.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text="Home" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="HOME" selectionFill="#fcfcfc" />
+               </graphic>
+            </Button>
+            <Button fx:id="reservation" alignment="CENTER" layoutX="15.0" layoutY="313.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text=" Reservation" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="evenement" alignment="CENTER" layoutX="15.0" layoutY="361.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text="  Evenement" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="shop" alignment="CENTER" layoutX="15.0" layoutY="408.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text="     Shop" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="station" alignment="CENTER" layoutX="15.0" layoutY="456.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text="Station et maintenance" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="ARROWS" />
+               </graphic>
+            </Button>
+            <Button fx:id="incident" alignment="CENTER" layoutX="15.0" layoutY="502.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text="incident et reclamation" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="historique" alignment="CENTER" layoutX="15.0" layoutY="546.0" mnemonicParsing="false" prefWidth="150.0" styleClass="navbutton" stylesheets="@dashboard.css" text="   historique" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" />
+               </graphic>
+            </Button>
+            <Button fx:id="edit" layoutX="38.0" layoutY="43.0" mnemonicParsing="false" prefHeight="83.0" prefWidth="102.0" styleClass="editButton" stylesheets="@dashboard.css">
+               <graphic>
+                  <FontAwesomeIcon fx:id="edit_icon" glyphName="EDIT" size="1.5em" />
+               </graphic>
+            </Button>
+         </children></AnchorPane>
+      <AnchorPane layoutX="180.0" layoutY="-2.0" prefHeight="30.0" prefWidth="821.0">
+         <children>
+            <Button layoutX="778.0" layoutY="-2.0" mnemonicParsing="false" onAction="#exit" prefHeight="32.0" prefWidth="43.0" styleClass="exit" stylesheets="@dashboard.css">
+               <graphic>
+                  <FontAwesomeIcon fill="WHITE" glyphName="CLOSE" />
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="180.0" layoutY="28.0" prefHeight="572.0" prefWidth="822.0" visible="false">
+         <children>
+            <AnchorPane prefHeight="150.0" prefWidth="822.0" styleClass="card-top" stylesheets="@dashboard.css" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="180.0" layoutY="38.0" prefHeight="562.0" prefWidth="822.0">
+         <children>
+            <AnchorPane prefHeight="150.0" prefWidth="822.0" styleClass="card-top" stylesheets="@dashboard.css">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="203.0" layoutX="298.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="C:/Users/rawef/OneDrive/Desktop/projects/sd-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="anchor_edit" layoutX="-11.0" layoutY="150.0" prefHeight="410.0" prefWidth="822.0" stylesheets="@dashboard.css">
+               <children>
+                  <Label layoutX="22.0" layoutY="73.0" text="Username:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="40.0" layoutY="122.0" text="email:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="172.0" text="Gender:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="37.0" layoutY="226.0" text="image:">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username" layoutX="119.0" layoutY="70.0" onKeyTyped="#textfieldRecord" onMouseClicked="#textfieldRecord" onMouseDragged="#textfieldRecord" styleClass="textfield-record-design" stylesheets="@dashboard.css" />
+                  <TextField fx:id="email" layoutX="119.0" layoutY="118.0" onKeyTyped="#textfieldRecord" onMouseClicked="#textfieldRecord" onMouseDragged="#textfieldRecord" styleClass="textfield-record-design" stylesheets="@dashboard.css" />
+                  <ComboBox fx:id="gender" layoutX="119.0" layoutY="169.0" onAction="#comboBox" onContextMenuRequested="#textfieldRecord" onKeyTyped="#textfieldRecord" onMouseClicked="#textfieldRecord" prefHeight="33.0" prefWidth="188.0" styleClass="textfield-record-design" stylesheets="@dashboard.css" />
+                  <ImageView fitHeight="102.0" fitWidth="204.0" layoutX="111.0" layoutY="220.0" pickOnBounds="true" preserveRatio="true" styleClass="insert-image-design">
+                     <effect>
+                        <Blend />
+                     </effect></ImageView>
+                  <Label layoutX="156.0" layoutY="325.0" text="Upload image" />
+                  <Line endX="-34.39996337890625" endY="298.4000244140625" layoutX="411.0" layoutY="112.0" startX="-34.39996337890625" startY="-112.00001525878906" />
+                  <TableView layoutX="385.0" layoutY="5.0" prefHeight="392.0" prefWidth="398.0">
+                    <columns>
+                      <TableColumn prefWidth="75.0" text="C1" />
+                      <TableColumn prefWidth="75.0" text="C2" />
+                    </columns>
+                  </TableView>
+                  <Label layoutX="114.0" layoutY="5.0" prefHeight="54.0" prefWidth="212.0" text="Edit profil" textFill="#bfa800">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
